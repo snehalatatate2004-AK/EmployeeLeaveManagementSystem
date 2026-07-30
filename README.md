@@ -42,7 +42,6 @@ EmployeeLeaveManagementSystem
 │   │   ├── java
 │   │   ├── resources
 │   │   └── webapp
-│── pom.xml
 ```
 
 ##  Database
