@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="entity.Leave" table="employee_leave">
+
+		<!-- Primary Key -->
+		<id name="leaveId" column="leave_id">
+
+			<generator class="identity"/>
+
+		</id>
+
+
+		<!-- Many Leaves belong to One Employee -->
+		<many-to-one name="employee"
+		             class="entity.Employee"
+		             column="employee_id"
+		             not-null="true"/>
+
+
+		<!-- Leave Type -->
+		<property name="leaveType" column="leave_type"/>
+
+
+		<!-- Start Date -->
+		<property name="startDate" column="start_date"/>
+
+
+		<!-- End Date -->
+		<property name="endDate" column="end_date"/>
+
+
+		<!-- Reason -->
+		<property name="reason" column="reason"/>
+
+
+		<!-- Status -->
+		<property name="status" column="status"/>
+
+	</class>
+
+</hibernate-mapping>

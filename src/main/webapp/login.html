@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Employee Leave Management System</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="login-box">
+
+            <h1>Employee Leave Management</h1>
+
+            <h2>Login</h2>
+
+
+            <!-- Error Message -->
+
+            <p id="error-message"></p>
+
+
+            <!-- Login Form -->
+
+            <form action="login"
+                  method="post">
+
+                <label>Email</label>
+
+                <input type="email"
+                       name="email"
+                       placeholder="Enter your email"
+                       required>
+
+
+                <label>Password</label>
+
+                <input type="password"
+                       name="password"
+                       placeholder="Enter your password"
+                       required>
+
+
+                <button type="submit">
+                    Login
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- Display Error Message -->
+
+    <script>
+
+        const params =
+            new URLSearchParams(
+                window.location.search
+            );
+
+
+        const error =
+            params.get("error");
+
+
+        if (error) {
+
+            document.getElementById(
+                "error-message"
+            ).innerText = error;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

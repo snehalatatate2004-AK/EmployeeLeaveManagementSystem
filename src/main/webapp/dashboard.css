@@ -1,0 +1,279 @@
+@charset "UTF-8";
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	background: #f4f6f9;
+}
+
+
+.header {
+	background: #667eea;
+	color: white;
+	padding: 20px 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header h1 {
+	font-size: 24px;
+}
+
+.logout-btn {
+	background: white;
+	color: #667eea;
+	padding: 10px 20px;
+	border-radius: 6px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+
+.dashboard-container {
+	width: 90%;
+	margin: 40px auto;
+	background: white;
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-container h2 {
+	text-align: center;
+	color: #333;
+	margin-bottom: 10px;
+}
+
+.dashboard-container h3 {
+	margin-top: 30px;
+	color: #555;
+}
+
+.subtitle {
+	color: #777;
+	margin-bottom: 30px;
+}
+
+
+.dashboard-cards {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 25px;
+}
+
+.card {
+	background: white;
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+	color: #667eea;
+	margin-bottom: 15px;
+}
+
+.card p {
+	color: #666;
+	margin-bottom: 20px;
+}
+
+
+.card button {
+	background: #667eea;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 6px;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.card button:hover {
+	background: #5568d8;
+}
+
+
+.dashboard-container table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+}
+
+.dashboard-container th, .dashboard-container td {
+	padding: 12px;
+	text-align: center;
+	border: 1px solid #ddd;
+}
+
+.dashboard-container th {
+	background: #343a40;
+	color: white;
+}
+
+.dashboard-container tr:nth-child(even) {
+	background: #f8f9fa;
+}
+
+
+.dashboard-container button {
+	padding: 8px 14px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-weight: bold;
+	color: white;
+}
+
+.dashboard-container button:hover {
+	opacity: 0.8;
+}
+
+/* Approve Button */
+
+.dashboard-container a[href*="approve-leave"] button {
+	background: #28a745;
+}
+
+/* Reject Button */
+
+.dashboard-container a[href*="reject-leave"] button {
+	background: #dc3545;
+}
+
+
+.apply-leave-container {
+	width: 600px;
+	margin: 50px auto;
+	background: white;
+	padding: 40px;
+	border-radius: 10px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.apply-leave-container h2 {
+	text-align: center;
+	color: #333;
+	margin-bottom: 30px;
+}
+
+/* Apply Leave Form */
+
+.apply-leave-container form {
+	margin-top: 0;
+}
+
+.apply-leave-container label {
+	display: block;
+	margin-bottom: 8px;
+	font-weight: bold;
+	color: #555;
+}
+
+.apply-leave-container select, .apply-leave-container input,
+	.apply-leave-container textarea {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	font-size: 14px;
+	margin-bottom: 15px;
+}
+
+.apply-leave-container textarea {
+	resize: vertical;
+}
+
+/* Apply Leave Button */
+.apply-leave-container button.apply-leave-btn {
+	background: #667eea;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 6px;
+	cursor: pointer;
+	font-weight: bold;
+	opacity: 1;
+}
+
+.apply-leave-container button.apply-leave-btn:hover {
+	background: #5568d8;
+}
+
+.view-records-container {
+	margin-top: 25px;
+	text-align: center;
+}
+
+.view-records-btn {
+	background: #667eea !important;
+	color: white !important;
+	border: none !important;
+	padding: 10px 20px !important;
+	border-radius: 6px !important;
+	cursor: pointer;
+	font-weight: bold;
+	opacity: 1 !important;
+}
+
+.view-records-btn:hover {
+	background: #5568d8 !important;
+}
+/* View All Leave Records Button */
+.dashboard-container a[href*="all-leaves"] button {
+	background: #667eea !important;
+	color: white !important;
+	border: none;
+	padding: 8px 14px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.dashboard-container a[href*="all-leaves"] button:hover {
+	background: #5568d8 !important;
+}
+
+/* View All Leave Records Button */
+.view-all-btn {
+	background-color: #667eea !important;
+	color: white !important;
+	border: none !important;
+	padding: 8px 14px !important;
+	border-radius: 5px !important;
+	cursor: pointer !important;
+	font-weight: bold !important;
+	opacity: 1 !important;
+}
+
+.view-all-btn:hover {
+	background-color: #5568d8 !important;
+}
+
+/* Add Employee Button */
+.add-employee-btn {
+	background: #667eea !important;
+	color: white !important;
+	border: none !important;
+	padding: 8px 14px !important;
+	border-radius: 5px !important;
+	cursor: pointer !important;
+	font-weight: bold !important;
+	opacity: 1 !important;
+}
+
+.add-employee-btn:hover {
+	background: #5568d8 !important;
+}
+
+.dashboard-container {
+	position: relative;
+}
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="entity.Department" table="department">
+
+		<id name="departmentId" column="department_id">
+
+			<generator class="identity"/>
+
+		</id>
+
+		<property name="departmentName"
+				  column="department_name"/>
+
+
+		<!-- One Department has Many Employees -->
+
+		<set name="employees" inverse="true">
+
+			<key column="department_id"/>
+
+			<one-to-many class="entity.Employee"/>
+
+		</set>
+
+	</class>
+
+</hibernate-mapping>

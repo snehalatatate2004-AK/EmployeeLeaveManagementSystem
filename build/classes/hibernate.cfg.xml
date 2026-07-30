@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+
+		<!-- Database Driver -->
+		<property name="hibernate.connection.driver_class">
+			com.mysql.cj.jdbc.Driver
+		</property>
+
+		<!-- Database URL -->
+		<property name="hibernate.connection.url">
+			jdbc:mysql://localhost:3306/employee_leave_management
+		</property>
+
+		<!-- Database Username -->
+		<property name="hibernate.connection.username">root</property>
+
+		<!-- Database Password -->
+		<property name="hibernate.connection.password">root</property>
+
+		<!-- MySQL Dialect -->
+		<property name="hibernate.dialect">
+			org.hibernate.dialect.MySQL8Dialect
+		</property>
+
+		<!-- Show SQL -->
+		<property name="hibernate.show_sql">true</property>
+
+		<!-- Format SQL -->
+		<property name="hibernate.format_sql">true</property>
+
+		<!-- Automatically create/update tables -->
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		
+		<mapping resource="Employee.hbm.xml"/>
+		<mapping resource="Leave.hbm.xml"/>
+		<mapping resource="Department.hbm.xml"/>
+
+	</session-factory>
+
+</hibernate-configuration>

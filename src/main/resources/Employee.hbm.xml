@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="entity.Employee" table="employee">
+
+		<id name="employeeId" column="employee_id">
+			<generator class="identity"/>
+		</id>
+
+		<property name="employeeName" column="employee_name"/>
+
+		<property name="employeeEmail" column="employee_email"/>
+
+		<property name="employeePassword" column="employee_password"/>
+
+		<property name="employeeDepartment" column="employee_department"/>
+
+		<property name="employeeDesignation" column="employee_designation"/>
+
+		<property name="employeeSalary" column="employee_salary"/>
+		
+		<property name="role" column="role" />
+		
+		<many-to-one name="department"
+             class="entity.Department"
+             column="department_id"
+             not-null="true"/>
+
+
+		<!-- One Employee has Many Leaves -->
+
+		<set name="leaves" inverse="true">
+
+			<key column="employee_id"/>
+
+			<one-to-many class="entity.Leave"/>
+
+		</set>
+
+	</class>
+
+</hibernate-mapping>
