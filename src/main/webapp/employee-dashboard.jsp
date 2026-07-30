@@ -3,7 +3,7 @@
 <%
     Employee employee =
         (Employee) session.getAttribute("loggedInEmployee");
-केलेला नसेल
+
     if (employee == null) {
         response.sendRedirect("login.html");
         return;
