@@ -71,6 +71,20 @@ EmployeeLeaveManagementSystem
 - View Leave Records
 - Add Employee
 
+## Screenshots
+
+### Employee Login
+![Employee Login](screenshots/Emp_login.png)
+
+### Employee Dashboard
+![Employee Dashboard](screenshots/Emp_dashboard.png)
+
+### Admin Dashboard
+![Admin Dashboard](screenshots/admin_dashboard.png)
+
+### Leave Records
+![Leave Records](screenshots/leave_records.png)
+
 ##  Developed By
 
 **Snehalata Tate**
